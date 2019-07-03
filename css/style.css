@@ -1,0 +1,585 @@
+*
+{
+
+    margin: 0;
+    padding: 0;
+    font-family: 'segoe UI', sans-serif;
+}
+
+body{
+    color: black;
+    font-size: 20px;
+    background-color: #FFFFFF;
+    font-family: 'segoe UI', sans-serif;
+}
+/* header */
+.navBar {
+    margin: auto;
+    display: flex;
+    height: 120px;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #006AB3;
+    color: #ffffff;
+}
+
+.navMobile {
+    display: none;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 99;
+}
+
+.navMobile #containerMob {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navMobile #containerMob #mobileLogo {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navMobile #containerMob #mobileLogo img {
+    width: 27%;
+}
+
+.navMobile #containerMob .menu i {
+    font-size: 35px;
+    color: #006AB3;
+}
+
+.navMobile #containerMob {
+    font-size: 35px;
+    color: #006AB3;
+}
+
+#logo {
+    width: 24%;
+}
+
+.menu {
+    display: flex;
+    width: 75%;
+    height: 100%;
+}
+
+.menu a:hover {
+    background-color: #ffffff;
+    color: #006AB3;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+    padding: 0 15px;
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    align-items: center;
+}
+.imgHeader{
+    width: 100%;
+}
+
+
+
+#modal {
+    animation-name: modalOpening;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: #006AB3;
+    top: 0;
+    z-index: 2;
+    display: none;
+}
+
+#modal .closeModal {
+    font-size: 35px;
+    color: white;
+    padding-left: 20px;
+}
+
+#modal .mobile {
+    display: flex;
+    flex-direction: column;
+    height: 75%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#modal .mobile a {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+}
+
+#modal .mobile a:hover {
+    background-color: #006AB3;
+    color: black;
+}
+
+@keyframes openModal {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .menu a {
+        font-size: 12px;
+        padding: 0 5px;
+        text-align: center;
+    }
+    #logo {
+        width: 11%;
+    }
+   }
+
+@media all and (max-width: 531px) {
+    .menu a {
+        font-size: 10px;
+    }
+    .navBar {
+        height: 85px;
+    }
+}
+
+@media all and (max-width: 426px) {
+    .navBar {
+        display: none;
+    }
+    .navMobile {
+        display: block;
+    }
+}
+
+/* footer  */
+
+.informations {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 20px;
+    width: 36%;
+    position: relative;
+}
+
+.informations a {
+    color: white;
+    text-decoration: none;
+}
+.adress {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 5px;
+    font-style: italic;
+
+}
+
+.adress a {
+    color: white;
+    text-decoration: none;
+}
+
+.container_f {
+    color: white;
+}
+
+.contactUs {
+    font-size: 25px;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #006AB3;
+    width: 76%;
+}
+
+.map {
+    width: 24%;
+    display: flex;
+}
+
+footer {
+    display: flex;
+}
+
+@media all and (max-width: 768px) {
+    .informations {
+        font-size: 15px;
+    }
+    .container_f .contactUs {
+        font-size: 20px;
+    }
+    .container_f .adress {
+        font-size: 15px;
+    }
+}
+
+@media all and (max-width: 578px) {
+    .informations {
+        font-size: 12px;
+        padding: 0 5px;
+        justify-content: space-around;
+    }
+    .container_f {
+        padding: 0 5px;
+    }
+    .container_f .contactUs {
+        font-size: 15px;
+    }
+    .container_f .adress {
+        font-size: 13px;
+    }
+}
+
+@media all and (max-width: 457px) {
+    .informations {
+        width: 45%;
+    }
+}
+
+@media all and (max-width: 426px) {
+    footer {
+        flex-direction: column;
+    }
+    footer .map {
+        width: 100%;
+    }
+    footer .contact {
+        width: 100%;
+    }
+    footer .contact .informations {
+        width: 100%;
+        height: 125px;
+        font-size: 14px;
+        padding: 0 6px;
+        align-items: center;
+        justify-content: space-around;
+    }
+    footer .contact .informations:after {
+        bottom: 0;
+    }
+    footer .contact .container_f {
+        width: 100%;
+        padding: 5px 5px;
+        flex-direction: column;
+        text-align: center;
+    }
+    footer .contact .container_f .contactUs {
+        font-size: 17px;
+    }
+    footer .contact .container_f .adress {
+        align-items: center;
+        font-size: 14px;
+    }
+}
+
+/*  home page */
+
+h1{
+    text-align: center;
+}
+.carousel {
+    position: relative;
+}
+.carousel	input {
+    position: absolute;
+    left: 0;
+    z-index: 3;
+    margin: 0;
+}
+.carousel input:before {
+    position: absolute;
+    content: "<";
+}
+input:checked ~ input:before {
+    content: ">";
+}
+input:checked {
+    display: none;
+}
+input:checked ~ input {
+    right: 0;
+    left: auto;
+}
+input:checked + div + input {
+    z-index: 4;
+}
+input + div {
+    position: absolute;
+    z-index: 1;
+}
+input:checked + div {
+    z-index: 2;
+}
+#actbtn{
+
+    background-color: #006AB3;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 19px;
+    border-radius: 5%;
+    cursor: pointer;
+    letter-spacing: 5px;
+    margin: auto;
+    /* align-items: center; */
+    margin-bottom: 30px;
+}
+#actbtn a {
+    text-decoration: none;
+    color: #ffffff;
+}
+/* Demo styles
+--------------------------------------------  */
+
+
+.carousel {
+    width: 480px;
+    height: 270px;
+    margin: 2em auto;
+    overflow:hidden;
+    transform: translateZ(0px); /* stops flickering incode pen*/
+    box-shadow: 0 0 2px 1px #ccc;
+}
+.carousel	input {
+    top: 150px;
+    width: 60px;
+    height: 60px;
+    left: 10px;
+}
+input:checked ~ input {
+    right: 10px;
+}
+.carousel input:before {
+    background: #006AB3;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 25px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border: 5px solid #fff;
+}
+
+#carous input + div {
+    transition: opacity 0s 1s;
+    opacity: 0;
+}
+#carous input:checked + div {
+    transition: opacity 1s;
+    opacity: 1;
+}
+
+#actbtn{
+
+}
+/* information */
+
+.flexbox
+{
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+
+
+
+}
+
+#infoParagraphe{
+    width: 500px;
+
+    color: #000;
+
+}
+
+.button {
+    background-color: #000000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 19px;
+    border-radius: 5%;
+    cursor: pointer;
+    letter-spacing: 5px;
+    margin: 20px 10%;
+
+
+}
+.btn{
+    display: flex;
+    justify-content: center;
+}
+
+#btnNautisme{
+    background-color: #006AB3;
+    margin-left: 25%;
+
+}
+/* tourisme */
+.activites{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: stretch;
+    margin: 10px;
+}
+.parActivite{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: stretch;
+    margin: 10px;
+}
+.parActivite a{
+    text-decoration: underline;
+    color: #000;
+
+}
+/*nautisme */
+
+.nautique{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: stretch;
+    margin: 10px;
+}
+.infoNautique {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: stretch;
+    margin: 10px;
+    text-align: center;
+}
+/*bouger*/
+.boug
+{
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+
+
+}
+
+#aqua{
+    width: 500px;
+    color: #000;
+
+}
+h1{
+    text-align: center;
+}
+.tarif{
+    text-align: center;
+}
+/*culture*/
+.cult
+{
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+
+
+
+}
+
+#fregate{
+    width: 500px;
+    color: #000;
+
+}
+h1{
+    text-align: center;
+}
+.tarif {
+    text-align: center;
+}
+
+/*zen*/
+.zen
+{
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+
+
+
+}
+
+#therm{
+    width: 500px;
+    color: #000;
+
+}
+h1{
+    text-align: center;
+}
+.tarif{
+    text-align: center;
+}
+input{
+    border: 1px solid;
+    padding: 5px 10px;
+    margin-left: 10px;
+}
+.main-header,
+.categories-nav,
+footer{
+    border:1px solid black;
+}
+
+.article-category{
+    color:red;
+}

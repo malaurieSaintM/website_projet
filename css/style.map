@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "style.css",
+	"sources": [
+		"../scss/style.scss"
+	],
+	"sourcesContent": [
+		".header{\r\n  .menu{\r\n    background-color: #006AB3;\r\n    color: #ffffff;\r\n  }\r\n}\r\n.header-logo{\r\n  width: 30%;\r\n}"
+	],
+	"names": [],
+	"mappings": ";AAAA,AACE,OADK,CACL,KAAK,CAAA;EACH,gBAAgB,EAAE,OAAO;EACzB,KAAK,EAAE,OAAO;CACf;;;AAEH,AAAA,YAAY,CAAA;EACV,KAAK,EAAE,GAAG;CACX"
+}
